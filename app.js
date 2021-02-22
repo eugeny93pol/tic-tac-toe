@@ -12,10 +12,6 @@ const PORT = process.env.PORT || config.get('port')
 
 app.use(express.json({ extended: true}))
 
-app.get('/', (req, res) => {
-     res.sendFile(__dirname + '/index.html')
-})
-
 app.use('/api/games', require('./routes/games.routes'))
 
 if (process.env.NODE_ENV === 'production') {
