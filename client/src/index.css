@@ -1,0 +1,97 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@yaireo/tagify/dist/tagify.css';
+
+.card-game {
+    height: 100%;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("svg/tags.svg");
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+}
+
+.game .box {
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+    cursor: pointer;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game .box:hover {
+    background-color: #dedede;
+}
+
+.game .box-cross {
+    background-image: url("svg/cancel.svg");
+    cursor: auto;
+}
+
+.game .box-zero {
+    background-image: url("svg/circle.svg");
+    cursor: auto;
+}
+.game .box-cross:hover,
+.game .box-zero:hover {
+    background-color: #cccccc;
+}
+
+.game .box-cross-c:hover {
+    background-image: url("svg/cancel.svg");
+}
+
+.game .box-zero-c:hover {
+    background-image: url("svg/circle.svg");
+}
+
+.tagify-custom {
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.tagify--focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25)
+}
+
+.tagify-custom .tagify__input {
+    padding-left: 0;
+    margin-left: 0;
+    color: #212529;
+}
+
+.tagify-custom .tagify__tag {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.dropdown {
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.custom-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.25rem;
+    border-radius: .25rem;
+    margin: 5px;
+    position: relative;
+    outline: 0;
+    cursor: default;
+    transition: .13s ease-out;
+    background-color: #e5e5e5;
+}
